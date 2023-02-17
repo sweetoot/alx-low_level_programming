@@ -1,36 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-/**
-* main - Entry point
-*
-* Return: 0
-*/
+/** 
+ * main - prints the alphabet
+ *
+ * Return always 0 (sucess)
+ */
 int main(void)
 {
-int a, b;
+char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+int i;
 
-for (a = '0'; a < '9'; a++)
-{
-for (b = a + 1; b <= '9'; b++)
-{
-if (b != a)
-{
-putchar(a);
-putchar(b);
+for (i = 0; i < 26; i++)
+ {
+	 putchar(alp[i]);
+ }
+ putchar('\n');
 
-if (a == '8' && b == '9')
-continue;
-
-putchar(',');
-putchar(' ');
+ return (0);
+  
 }
-}
-}
-putchar('\n');
-
-return (0);
-}
-
-
